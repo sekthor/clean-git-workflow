@@ -27,5 +27,9 @@ jobs:
         run: make all
 
       # Run
-      - name: run
-        run: ./main
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: main
+          
